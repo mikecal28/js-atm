@@ -85,6 +85,14 @@ class Account {
     }
   }
 
+  printReceipt() {
+    console.clear();
+    console.log("Receipt");
+    console.log("-------");
+    console.log(`Balance: $${this.balance}`);
+    console.log("");
+  }
+
   static deleteAccount(account) {
     account = null;
   }
@@ -123,7 +131,7 @@ function startAtm() {
         break;
       case "4":
         active = false;
-        console.clear();
+        userAccount.printReceipt();
         console.log("Goodbye!");
         break;
       case "5":
@@ -140,4 +148,4 @@ function startAtm() {
 
 const sleep = () => new Promise((resolve) => setTimeout(resolve, 1000));
 
-// startAtm();
+startAtm();
