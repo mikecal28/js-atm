@@ -65,10 +65,9 @@ class Account {
           this.balance = this.balance - withdrawal;
           response = prompt("Response:");
         }
-      } else {
-        this.balance = this.balance;
       }
     }
+    this.balance = this.balance;
   }
 
   printBalance() {
